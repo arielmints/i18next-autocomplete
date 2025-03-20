@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "module": "Node16",
+    "target": "ES2022",
+    "outDir": "out",
+    "lib": ["ES2022"],
+    "sourceMap": true,
+    "rootDir": "src",
+    "strict": true,
+    "moduleResolution": "Node16",
+    "esModuleInterop": true,
+    "allowUmdGlobalAccess": true,
+
+    "noEmit": false,
+    "removeComments": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+
+    "inlineSources": true,
+    "isolatedModules": false,
+    "allowSyntheticDefaultImports": true,
+
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+    "skipLibCheck": true
+    /* Additional Checks */
+    // "noImplicitReturns": true, /* Report 		r when not all code paths in function return a value. */
+    // "noFallthroughCasesInSwitch": true, /*		ort errors for fallthrough cases in switch statement. */
+    // "noUnusedP	ameters": true,  /* Report errors on unused parameters. */
+  }
+}

@@ -1,0 +1,1 @@
+{"root":["./src/extension.ts","./src/findtranslationfiles.ts","./src/translationcompletionprovider.ts","./src/types.ts","./src/utils.ts","./src/test/extension.test.ts"],"version":"5.8.2"}
