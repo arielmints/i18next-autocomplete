@@ -22,7 +22,7 @@ const provideCompletionItems = async (
   const namespaceCompletions = namespaces.map((namespace) => {
     const item = new vscode.CompletionItem(
       namespace,
-      vscode.CompletionItemKind.Property
+      vscode.CompletionItemKind.Enum
     );
     item.insertText = namespace;
     item.documentation = new vscode.MarkdownString(
@@ -36,7 +36,7 @@ const provideCompletionItems = async (
     ([key, completionObject]) => {
       const item = new vscode.CompletionItem(
         key,
-        vscode.CompletionItemKind.Module
+        vscode.CompletionItemKind.EnumMember
       );
       item.insertText = key;
       item.documentation = new vscode.MarkdownString(

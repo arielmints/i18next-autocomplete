@@ -1,6 +1,51 @@
-import * as fs from "fs";
-import * as path from "path";
 import * as vscode from "vscode";
+import { flattenObject } from "./utils";
+import { loadAndParseTranslationJSONFile } from "./parsers/json-parser";
+import { ConfigDetails } from "./types";
+import { extractI18nBackendLoadPathConfig } from "./parsers/config-file-parser";
+
+/**
+ * Retrieves translation file paths based on the provided config details
+ * @param configDetails The configuration details containing supported languages and namespaces
+ * @returns An array of objects containing translation file paths, translations, and flattened keys
+ */
+const getTranslationFilePaths = async (
+  configDetails: ConfigDetails
+): Promise<
+  Array<{
+    lng: string;
+    namespace: string;
+    path: string;
+    translations: object;
+    translationsFlattedKeys: string[];
+  }>
+> => {
+  const paths: Array<{
+    lng: string;
+    namespace: string;
+    path: string;
+    translations: object;
+    translationsFlattedKeys: string[];
+  }> = [];
+  for (const lng of configDetails?.supportedLngs ?? []) {
+    for (const namespace of configDetails?.namespaces ?? []) {
+      const builtPath = (configDetails?.absoluteLoadPath ?? "")
+        .replace("{{lng}}", lng)
+        .replace("{{ns}}", namespace);
+      const translations = await loadAndParseTranslationJSONFile(builtPath);
+      const translationsFlatted = flattenObject(translations);
+      paths.push({
+        lng,
+        namespace,
+        path: builtPath,
+        translations,
+        translationsFlattedKeys: Object.keys(translationsFlatted),
+      });
+    }
+  }
+
+  return paths;
+};
 
 const getPublicPathFromSettings = () => {
   // Get the TypeScript configuration section
@@ -65,4 +110,37 @@ const convertTranslationsToCompletions = (
   }
   return completions;
 };
-export { convertTranslationsToCompletions, getPublicPathFromSettings };
+
+const getLoadPathCompletions = async (configFile: string) => {
+  // Handle loadPath configuration
+  const configDetails = await extractI18nBackendLoadPathConfig(configFile);
+
+  if (!configDetails) {
+    vscode.window.showErrorMessage(
+      "i18n-autocomplete: No config details found"
+    );
+    return { completions: {}, namespaces: [] };
+  }
+
+  const paths = await getTranslationFilePaths(configDetails);
+  if (paths.length === 0) {
+    vscode.window.showErrorMessage(
+      "i18n-autocomplete: No translation files found"
+    );
+    return { completions: {}, namespaces: [] };
+  }
+
+  const completions = convertTranslationsToCompletions(paths);
+
+  return {
+    completions,
+    namespaces: configDetails?.namespaces ?? [],
+  };
+};
+
+export {
+  convertTranslationsToCompletions,
+  getPublicPathFromSettings,
+  getTranslationFilePaths,
+  getLoadPathCompletions,
+};

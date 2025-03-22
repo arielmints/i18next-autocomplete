@@ -1,7 +1,21 @@
 import * as fs from "fs";
 import path from "path";
 import { getPublicPathFromSettings } from "../backend-loadpath-utils";
-import { TranslationResource } from "../types";
+import { ConfigDetails, TranslationResource } from "../types";
+
+/**
+ * Removes URL parameters from a given URL string
+ * @param url The URL string to process
+ * @returns The URL string with parameters removed
+ */
+const removeUrlParams = (url: string): string => {
+  try {
+    const parsedUrl = new URL(url, "http://dummy.com"); // Use a dummy base for relative URLs
+    return decodeURIComponent(parsedUrl.pathname);
+  } catch {
+    return decodeURIComponent(url.split("?")[0]); // Fallback for invalid URLs
+  }
+};
 
 /**
  * Extracts i18n configuration backend loadPath details from a config file
@@ -10,12 +24,7 @@ import { TranslationResource } from "../types";
  */
 async function extractI18nBackendLoadPathConfig(
   configFilePath: string
-): Promise<{
-  loadPath: string | null;
-  absoluteLoadPath: string | null;
-  namespaces: string[] | null;
-  supportedLngs: string[] | null;
-} | null> {
+): Promise<ConfigDetails | null> {
   try {
     // Read the file content
     const content = await fs.promises.readFile(configFilePath, "utf8");
@@ -25,7 +34,7 @@ async function extractI18nBackendLoadPathConfig(
     const loadPathRegex =
       /backend\s*:\s*{[^}]*loadPath\s*:\s*["'`]([^"'`]+)["'`][^}]*}/s;
     const loadPathMatch = content.match(loadPathRegex);
-    const loadPath = loadPathMatch ? loadPathMatch[1] : null;
+    const loadPath = loadPathMatch ? removeUrlParams(loadPathMatch[1]) : null;
 
     const publicPath = getPublicPathFromSettings();
     // Calculate absolute path if loadPath exists
