@@ -18,14 +18,13 @@ No more typos. No more guessing. Just accurate, context-aware IntelliSense direc
 
 > 🧵 _Avoid this..._
 
-**Broken keys in your app due to typos:**
-
 <img width="272" alt="image" src="https://github.com/user-attachments/assets/19aa57ab-1eab-4713-97f1-ced676763a02" />
 <img width="268" alt="image" src="https://github.com/user-attachments/assets/92bd4bc8-ca43-417a-9812-3046fdabe039" />
 
-> ✨ _With this..._
+Broken keys in your app due to typos
 
-**Seamless and accurate key autocompletions:**
+
+> ✨ _With this..._
 
 <img width="503" alt="image" src="https://github.com/user-attachments/assets/7d0ef9c9-2499-482e-8104-51a47572c6a1" />
 
