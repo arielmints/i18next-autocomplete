@@ -1,6 +1,6 @@
 # i18n-autocomplete
 
-![Logo](./assets/logo.png)  
+![Logo](![image](https://github.com/user-attachments/assets/5a11a8e3-d342-4f72-b501-899c1be12e7e))  
 ![CI Status](https://img.shields.io/github/actions/workflow/status/your-org/i18n-autocomplete/ci.yml?branch=main)  
 ![VS Code Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/yourpublisher.i18n-autocomplete)  
 ![Downloads](https://img.shields.io/visual-studio-marketplace/d/yourpublisher.i18n-autocomplete)
