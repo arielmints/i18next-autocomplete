@@ -63,6 +63,9 @@ You must set the absolute path to your project's `public` folder — this is whe
 2. Search for **i18next-autocomplete: Public Path**
 3. Set the absolute path to your `public` folder
 
+![image](https://github.com/user-attachments/assets/b0126391-1090-469a-9110-801c68ebb7ef)
+
+
 #### Option 2: Add it directly in your `settings.json`
 
 ```json
@@ -85,7 +88,3 @@ Whether it's fixing bugs, suggesting new features, or improving performance — 
 ---
 
 Made with ❤️ for i18next users.
-
-```
-
-```
