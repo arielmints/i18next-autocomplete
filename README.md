@@ -43,12 +43,22 @@ Broken keys in your app due to typos
 - 📁 **Supports `backend` plugin with `loadPath`**  
   Parses your i18next configuration to discover and load translation files using the `loadPath` option.
 
-- ⚙️ **Zero config required**  
-  Just install and go! Works out of the box with typical i18next setups.
+- 🛠️ **Minimal Setup**  
+  Just one config required: the absolute path to your `public` folder, so the extension can resolve the translation files correctly.
 
 > ⚠️ Currently, only `loadPath` is supported (not the `resources` inline config). Support coming soon!
 
 ---
+
+## ⚙️ Configuration
+
+To allow the extension to locate your translation files (based on the `loadPath` in your i18next config), you must set the absolute path to your project's `public` directory in your VS Code settings.
+
+### VS Code Settings (example):
+
+```json
+"i18next-autocomplete.publicPath": "/Users/my-user/code/my-react-app/public/"
+
 
 ## 🤝 Contributing
 
@@ -66,3 +76,4 @@ Whether it's fixing bugs, suggesting new features, or improving performance — 
 ---
 
 Made with ❤️ for i18next users.
+```
