@@ -1,4 +1,4 @@
-<img src="https://github.com/user-attachments/assets/4dd85ed4-900a-46ce-b189-551b916e5e2a" width="250"/>
+<img src="https://github.com/user-attachments/assets/4dd85ed4-900a-46ce-b189-551b916e5e2a" width="200"/>
 
 # i18n-autocomplete
 
