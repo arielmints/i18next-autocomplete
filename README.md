@@ -52,9 +52,18 @@ Broken keys in your app due to typos
 
 ## ⚙️ Configuration
 
-To allow the extension to locate your translation files (based on the `loadPath` in your i18next config), you must set the absolute path to your project's `public` directory in your VS Code settings.
+To enable IntelliSense, the extension needs to know where your translation files live.  
+You must set the absolute path to your project's `public` folder — this is where your `locales/` directory typically lives.
 
-### VS Code Settings (example):
+### 🔧 How to configure
+
+#### Option 1: Through the VS Code **Settings UI**
+
+1. Open the Command Palette → `Preferences: Open Settings (UI)`
+2. Search for **i18next-autocomplete: Public Path**
+3. Set the absolute path to your `public` folder
+
+#### Option 2: Add it directly in your `settings.json`
 
 ```json
 "i18next-autocomplete.publicPath": "/Users/my-user/code/my-react-app/public/"
