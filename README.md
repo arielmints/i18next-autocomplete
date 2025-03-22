@@ -1,6 +1,6 @@
+<img src="https://github.com/user-attachments/assets/18ed52a5-2eef-4aad-b670-a46998080bbf" width="250"/>
 # i18n-autocomplete
 
-<img src="https://github.com/user-attachments/assets/18ed52a5-2eef-4aad-b670-a46998080bbf" width="250"/>
 ![CI Status](https://img.shields.io/github/actions/workflow/status/your-org/i18n-autocomplete/ci.yml?branch=main)  
 ![VS Code Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/yourpublisher.i18n-autocomplete)  
 ![Downloads](https://img.shields.io/visual-studio-marketplace/d/yourpublisher.i18n-autocomplete)
