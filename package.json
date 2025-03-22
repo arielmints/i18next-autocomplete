@@ -1,7 +1,11 @@
 {
   "name": "i18next-autocomplete",
-  "displayName": "i18next-autocomplete",
-  "description": "",
+  "displayName": "i18next Autocomplete",
+  "publisher": "arielmints",
+  "author": {
+    "name": "Ariel Mints"
+  },
+  "description": "IntelliSense for i18next translation keys and namespaces.",
   "version": "0.0.1",
   "license": "MIT",
   "icon": "assets/icon.png",
@@ -14,6 +18,37 @@
   },
   "categories": [
     "Other"
+  ],
+  "tags": [
+    "i18next",
+    "autocomplete",
+    "translation",
+    "i18n",
+    "internationalization",
+    "intellisense",
+    "i18n-autocomplete",
+    "i18next-autocomplete",
+    "i18next-autocomplete-vscode",
+    "i18next-autocomplete-vscode-extension",
+    "i18next-autocomplete-vscode-extension-pac`k`"
+  ],
+  "keywords": [
+    "i18next",
+    "i18n",
+    "translation",
+    "internationalization",
+    "localization",
+    "autocomplete",
+    "intellisense",
+    "json",
+    "translation keys",
+    "translation key completion",
+    "VS Code i18n",
+    "i18next autocomplete",
+    "l10n",
+    "translation helper",
+    "developer tools",
+    "productivity"
   ],
   "activationEvents": [
     "onLanguage:javascript",
@@ -78,8 +113,7 @@
     "compile": "tsc -p ./",
     "watch": "rm -rf ./out && tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src",
-    "test": "vscode-test"
+    "lint": "eslint src"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
