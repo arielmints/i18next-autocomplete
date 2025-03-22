@@ -1,6 +1,6 @@
 # i18n-autocomplete
 
-![image](https://github.com/user-attachments/assets/18ed52a5-2eef-4aad-b670-a46998080bbf)
+<img src="https://github.com/user-attachments/assets/18ed52a5-2eef-4aad-b670-a46998080bbf" width="250"/>
 
 
 ![CI Status](https://img.shields.io/github/actions/workflow/status/your-org/i18n-autocomplete/ci.yml?branch=main)  
