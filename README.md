@@ -58,7 +58,7 @@ To allow the extension to locate your translation files (based on the `loadPath`
 
 ```json
 "i18next-autocomplete.publicPath": "/Users/my-user/code/my-react-app/public/"
-
+```
 
 ## 🤝 Contributing
 
@@ -76,4 +76,7 @@ Whether it's fixing bugs, suggesting new features, or improving performance — 
 ---
 
 Made with ❤️ for i18next users.
+
+```
+
 ```
