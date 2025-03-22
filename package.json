@@ -6,7 +6,7 @@
     "name": "Ariel Mints"
   },
   "description": "IntelliSense for i18next translation keys and namespaces.",
-  "version": "0.0.1",
+  "version": "0.0.11",
   "license": "MIT",
   "icon": "assets/icon.png",
   "repository": {
@@ -113,7 +113,8 @@
     "compile": "tsc -p ./",
     "watch": "rm -rf ./out && tsc -watch -p ./",
     "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
@@ -125,6 +126,10 @@
     "@vscode/test-electron": "^2.4.1",
     "esbuild": "^0.25.1",
     "eslint": "^9.21.0",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^22.0.12"
   }
 }
