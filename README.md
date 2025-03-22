@@ -24,13 +24,11 @@ No more typos. No more guessing. Just accurate, context-aware IntelliSense direc
 
 Broken keys in your app due to typos
 
-
 > ✨ _With this..._
 
 <img width="503" alt="image" src="https://github.com/user-attachments/assets/7d0ef9c9-2499-482e-8104-51a47572c6a1" />
 
-
-![Autocomplete screenshot](./assets/autocomplete-demo.gif)
+<!-- Autocomplete screenshot -->
 
 ---
 
