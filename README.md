@@ -3,8 +3,8 @@
 # i18n-autocomplete
 
 ![CI Status](https://img.shields.io/github/actions/workflow/status/your-org/i18n-autocomplete/ci.yml?branch=main)  
-![VS Code Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/yourpublisher.i18n-autocomplete)  
-![Downloads](https://img.shields.io/visual-studio-marketplace/d/yourpublisher.i18n-autocomplete)
+![VS Code Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/ArielMints.i18next-autocomplete)  
+![Downloads](https://img.shields.io/visual-studio-marketplace/d/ArielMints.i18next-autocomplete)
 
 ---
 
